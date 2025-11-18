@@ -80,7 +80,7 @@ export default function JobsPage() {
     if (savedBookmarks) {
       try {
         const bookmarks = JSON.parse(savedBookmarks)
-        const bookmarkIds = new Set<string>(bookmarks.map((job: any) => job.id))
+                                           const bookmarkIds = new Set<string>(bookmarks.map((job: any) => job.id))
         setBookmarkedJobs(bookmarkIds)
       } catch (error) {
         console.error('Failed to load bookmarks:', error)

@@ -104,7 +104,7 @@ export function JobDetailsModal({
             <div className="flex gap-2 sm:ml-auto">
               <Badge variant={job.type === "remote" ? "default" : "secondary"} className="capitalize">
                 <Briefcase className="w-3 h-3 mr-1" />
-                {job.type.replace("-", " ")}
+                {job.type?.replace("-", " ") || "Full-time"}
               </Badge>
               {job.isNew && (
                 <Badge variant="destructive" className="animate-pulse">

@@ -90,8 +90,8 @@ export function JobCard({ job, onBookmark, onShare, isBookmarked = false, onJobC
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-3">
               <Avatar className="h-12 w-12">
-                <AvatarImage src={job.companyLogoUrl || "/placeholder.svg"} alt={job.company} />
-                <AvatarFallback>{job.company.slice(0, 2).toUpperCase()}</AvatarFallback>
+                <AvatarImage src={job.companyLogoUrl || "/placeholder.svg"} alt={job.company || 'Company'} />
+                <AvatarFallback>{job.company?.slice(0, 2).toUpperCase() || 'CO'}</AvatarFallback>
               </Avatar>
               <div>
                 <h3 className="font-semibold text-lg text-foreground group-hover:text-primary transition-colors">
